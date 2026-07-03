@@ -1,0 +1,250 @@
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  background: var(--white);
+  border-bottom: 2px solid var(--pine);
+  height: var(--header-height);
+  transition: box-shadow 0.2s;
+}
+
+.site-header.menu-open {
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  gap: 1.5rem;
+}
+
+.logo-block {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  color: inherit;
+  flex-shrink: 0;
+  z-index: 201;
+}
+
+.logo-mark {
+  width: 42px;
+  height: 42px;
+  background: var(--pine);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 6px;
+}
+
+.logo-mountain {
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: 14px solid transparent;
+  border-right: 14px solid transparent;
+  border-bottom: 22px solid var(--saffron);
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.logo-dept {
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+
+.logo-title {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  color: var(--pine);
+}
+
+.main-nav ul {
+  display: flex;
+  list-style: none;
+  gap: 0.15rem;
+}
+
+.main-nav a {
+  display: block;
+  padding: 0.5rem 0.85rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+  color: var(--saffron);
+  border-bottom-color: var(--saffron);
+}
+
+.helpline-chip {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-decoration: none;
+  padding: 0.35rem 0.75rem;
+  background: var(--cream);
+  border: 1px solid var(--border);
+  flex-shrink: 0;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.helpline-chip:hover {
+  border-color: var(--pine);
+  background: var(--white);
+}
+
+.helpline-label {
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+
+.helpline-num {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--pine);
+}
+
+/* Mobile menu toggle */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  padding: 10px;
+  background: none;
+  border: 1px solid var(--border);
+  cursor: pointer;
+  z-index: 201;
+}
+
+.menu-bar {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: var(--pine);
+  transition: transform 0.25s, opacity 0.25s;
+}
+
+.menu-open .menu-bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.menu-open .menu-bar:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-open .menu-bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Mobile nav drawer */
+.mobile-nav {
+  display: none;
+  position: fixed;
+  top: var(--header-height);
+  right: 0;
+  width: min(320px, 85vw);
+  height: calc(100vh - var(--header-height));
+  background: var(--white);
+  border-left: 1px solid var(--border);
+  padding: 1.5rem 1.25rem;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  z-index: 199;
+  overflow-y: auto;
+}
+
+.mobile-nav.open {
+  transform: translateX(0);
+}
+
+.mobile-nav ul {
+  list-style: none;
+}
+
+.mobile-nav li {
+  border-bottom: 1px solid var(--border);
+}
+
+.mobile-nav a {
+  display: block;
+  padding: 1rem 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--ink);
+  text-decoration: none;
+  transition: color 0.15s, padding-left 0.15s;
+}
+
+.mobile-nav a:hover,
+.mobile-nav a.active {
+  color: var(--saffron);
+  padding-left: 0.85rem;
+}
+
+.mobile-helpline {
+  display: block;
+  margin-top: 1.5rem;
+  padding: 0.85rem 1rem;
+  background: var(--cream);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--pine);
+  text-decoration: none;
+  text-align: center;
+}
+
+.nav-backdrop {
+  display: none;
+  position: fixed;
+  inset: 0;
+  top: var(--header-height);
+  background: rgba(28, 26, 23, 0.4);
+  border: none;
+  cursor: pointer;
+  z-index: 198;
+}
+
+@media (max-width: 900px) {
+  .main-nav,
+  .helpline-chip {
+    display: none;
+  }
+
+  .menu-toggle,
+  .mobile-nav,
+  .nav-backdrop {
+    display: flex;
+  }
+
+  .nav-backdrop {
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-dept {
+    display: none;
+  }
+}

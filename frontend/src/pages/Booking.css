@@ -1,0 +1,115 @@
+.booking-disclaimer {
+  background: #fff8e6;
+  border: 1px solid #e6d5a8;
+  border-left: 4px solid var(--saffron);
+  padding: 1rem 1.25rem;
+  font-size: 0.9rem;
+  color: var(--ink);
+  margin-bottom: 2rem;
+  line-height: 1.55;
+}
+
+.booking-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3.5rem;
+}
+
+.booking-card {
+  position: relative;
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 1.5rem 1.35rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.booking-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  background: var(--pine);
+  color: var(--white);
+  padding: 0.25rem 0.5rem;
+}
+
+.booking-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.25rem;
+  padding-right: 4rem;
+}
+
+.booking-provider {
+  font-size: 0.82rem;
+  color: var(--lake);
+  margin-bottom: 0.65rem;
+}
+
+.booking-meta {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--pine);
+  margin-bottom: 0.85rem;
+}
+
+.meta-sep {
+  margin: 0 0.35rem;
+  color: var(--border);
+}
+
+.booking-desc {
+  font-size: 0.88rem;
+  color: var(--ink-muted);
+  line-height: 1.55;
+  flex: 1;
+  margin-bottom: 1.25rem;
+}
+
+.booking-btn {
+  width: 100%;
+  justify-content: center;
+}
+
+.partners-section {
+  padding: 2rem 0;
+  border-top: 1px solid var(--border);
+}
+
+.partners-section h2 {
+  font-size: 1.35rem;
+  margin-bottom: 0.5rem;
+}
+
+.partners-section > p {
+  font-size: 0.9rem;
+  color: var(--ink-muted);
+  margin-bottom: 1.25rem;
+}
+
+.partners-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.partner-link {
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 0.55rem 1rem;
+  background: var(--cream);
+  border: 1px solid var(--border);
+  color: var(--pine);
+  text-decoration: none;
+  transition: background 0.15s;
+}
+
+.partner-link:hover {
+  background: var(--pine);
+  color: var(--white);
+  border-color: var(--pine);
+}

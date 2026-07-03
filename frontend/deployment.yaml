@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tourism-frontend
+  labels:
+    app: tourism-frontend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: tourism-frontend
+  template:
+    metadata:
+      labels:
+        app: tourism-frontend
+    spec:
+      containers:
+        - name: tourism-frontend
+          image: tourisminformation-frontend:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 80
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 80
+            initialDelaySeconds: 5
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 80
+            initialDelaySeconds: 20
+            periodSeconds: 30
+          resources:
+            requests:
+              cpu: 50m
+              memory: 64Mi
+            limits:
+              cpu: 200m
+              memory: 128Mi

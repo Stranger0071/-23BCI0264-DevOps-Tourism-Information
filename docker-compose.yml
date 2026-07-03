@@ -1,0 +1,72 @@
+services:
+  backend:
+    image: tourisminformation-backend:latest
+    build:
+      context: ./tourisminformation
+      dockerfile: Dockerfile
+    container_name: jk-tourism-backend
+    ports:
+      - "8081:8081"
+    environment:
+      APP_CORS_ALLOWED_ORIGINS: "http://localhost,http://localhost:80,http://127.0.0.1"
+      MANAGEMENT_METRICS_EXPORT_GRAPHITE_HOST: graphite
+      MANAGEMENT_METRICS_EXPORT_GRAPHITE_PORT: 2003
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:8081/api/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 40s
+    networks:
+      - tourism-net
+      - monitoring
+
+  frontend:
+    image: tourisminformation-frontend:latest
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: jk-tourism-frontend
+    ports:
+      - "80:80"
+    depends_on:
+      backend:
+        condition: service_healthy
+    networks:
+      - tourism-net
+
+  graphite:
+    image: graphiteapp/graphite-statsd
+    container_name: graphite
+    ports:
+      - "8082:80"
+      - "2003:2003"
+    restart: unless-stopped
+    networks:
+      - monitoring
+
+  grafana:
+    image: grafana/grafana
+    container_name: grafana
+    ports:
+      - "3000:3000"
+    depends_on:
+      - graphite
+    restart: unless-stopped
+    networks:
+      - monitoring
+
+  nagios:
+    image: jasonrivers/nagios
+    container_name: nagios
+    ports:
+      - "8083:80"
+    restart: unless-stopped
+    networks:
+      - monitoring
+
+networks:
+  tourism-net:
+    driver: bridge
+  monitoring:
+    driver: bridge

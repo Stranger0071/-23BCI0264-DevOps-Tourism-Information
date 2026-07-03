@@ -1,0 +1,326 @@
+:root {
+  --saffron: #c45c26;
+  --saffron-light: #e8a574;
+  --pine: #2d4a3e;
+  --pine-dark: #1e3329;
+  --lake: #3d6b7a;
+  --lake-light: #5a8f9f;
+  --snow: #f7f5f0;
+  --cream: #ede9e1;
+  --ink: #1c1a17;
+  --ink-muted: #5c574f;
+  --walnut: #b8956b;
+  --border: #d4cfc4;
+  --white: #ffffff;
+
+  --font-serif: 'DM Serif Display', Georgia, serif;
+  --font-sans: 'IBM Plex Sans', system-ui, sans-serif;
+
+  --max-width: 1180px;
+  --header-height: 72px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--ink);
+  background: var(--snow);
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--lake);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--saffron);
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+/* Utility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.tag {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.6rem;
+  background: var(--cream);
+  color: var(--pine);
+  border: 1px solid var(--border);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0.65rem 1.25rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border-color 0.2s, transform 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn-primary {
+  background: var(--pine);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  background: var(--pine-dark);
+  color: var(--white);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--pine);
+  border: 1.5px solid var(--pine);
+}
+
+.btn-outline:hover {
+  background: var(--pine);
+  color: var(--white);
+}
+
+.btn-saffron {
+  background: var(--saffron);
+  color: var(--white);
+}
+
+.btn-saffron:hover {
+  background: #a84d1f;
+  color: var(--white);
+}
+
+.section-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--saffron);
+  margin-bottom: 0.5rem;
+}
+
+.page-header {
+  padding: 2.5rem 1.5rem 2rem;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 2.5rem;
+  background: linear-gradient(135deg, var(--white), rgba(237, 233, 225, 0.55));
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: 0 1px 0 rgba(28, 26, 23, 0.03);
+}
+
+.page-header h1 {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  margin-bottom: 0.75rem;
+}
+
+.page-header p {
+  color: var(--ink-muted);
+  max-width: 560px;
+  font-size: 1.05rem;
+}
+
+/* Filter bar */
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  align-items: center;
+}
+
+.filter-btn {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  padding: 0.4rem 0.85rem;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--ink-muted);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background: var(--pine);
+  border-color: var(--pine);
+  color: var(--white);
+}
+
+/* Cards grid */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.75rem;
+  align-items: stretch;
+}
+
+/* Notice banner */
+.notice-bar {
+  background: var(--pine-dark);
+  color: var(--cream);
+  font-size: 0.8rem;
+  padding: 0.5rem 0;
+  text-align: center;
+}
+
+.notice-bar a {
+  color: var(--saffron-light);
+  text-decoration: underline;
+}
+
+/* Page layout */
+main {
+  min-height: calc(100vh - var(--header-height) - 200px);
+  padding-bottom: 4rem;
+}
+
+.page-transition {
+  animation: pageEnter 0.32s ease both;
+}
+
+@keyframes pageEnter {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Search & toolbar */
+.page-toolbar {
+  margin-bottom: 1.25rem;
+}
+
+.search-box {
+  max-width: 400px;
+}
+
+.search-input {
+  width: 100%;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  padding: 0.65rem 1rem 0.65rem 2.5rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--white) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%235c574f' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85zm-5.242 1.156a5 5 0 1 1 0-10 5 5 0 0 1 0 10z'/%3E%3C/svg%3E") no-repeat 0.85rem center;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--pine);
+  box-shadow: 0 0 0 3px rgba(45, 74, 62, 0.12);
+}
+
+.search-input::placeholder {
+  color: var(--ink-muted);
+  opacity: 0.7;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: var(--ink-muted);
+  font-size: 0.95rem;
+  background: var(--white);
+  border: 1px dashed var(--border);
+  border-radius: 8px;
+}
+
+/* Focus accessibility */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--saffron);
+  outline-offset: 2px;
+}
+
+.btn:focus-visible {
+  outline-offset: 3px;
+}
+
+/* Smooth card hover lift */
+.attraction-card,
+.hotel-card,
+.booking-card,
+.quick-link-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.attraction-card:hover,
+.hotel-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(45, 74, 62, 0.1);
+}
+
+@media (max-width: 640px) {
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}

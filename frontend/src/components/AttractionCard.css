@@ -1,0 +1,131 @@
+.attraction-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 1px 0 rgba(28, 26, 23, 0.03);
+}
+
+.attraction-card.featured {
+  grid-column: span 2;
+  flex-direction: row;
+}
+
+.card-image-link {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  aspect-ratio: 16 / 10;
+}
+
+.card-image-link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(28, 26, 23, 0.28), transparent 46%);
+  pointer-events: none;
+}
+
+.featured .card-image-link {
+  flex: 0 0 55%;
+  aspect-ratio: auto;
+  min-height: 280px;
+}
+
+.card-image-link img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.attraction-card:hover .card-image-link img {
+  transform: scale(1.03);
+}
+
+.card-category {
+  position: absolute;
+  bottom: 0.75rem;
+  left: 0.75rem;
+  z-index: 1;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  background: var(--white);
+  color: var(--pine);
+  padding: 0.25rem 0.55rem;
+  border-radius: 999px;
+  box-shadow: 0 6px 14px rgba(28, 26, 23, 0.12);
+}
+
+.card-body {
+  padding: 1.25rem 1.35rem 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  margin-bottom: 0.4rem;
+}
+
+.meta-dot {
+  margin: 0 0.35rem;
+}
+
+.card-body h3 {
+  font-size: 1.35rem;
+  margin-bottom: 0.6rem;
+}
+
+.card-body h3 a {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.card-body h3 a:hover {
+  color: var(--saffron);
+}
+
+.card-body p {
+  font-size: 0.9rem;
+  color: var(--ink-muted);
+  flex: 1;
+  line-height: 1.55;
+}
+
+.card-read-more {
+  align-self: flex-start;
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--lake);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(61, 107, 122, 0.25);
+}
+
+.card-read-more:hover {
+  color: var(--saffron);
+  border-bottom-color: rgba(196, 92, 38, 0.4);
+}
+
+@media (max-width: 768px) {
+  .attraction-card.featured {
+    grid-column: span 1;
+    flex-direction: column;
+  }
+
+  .featured .card-image-link {
+    flex: none;
+    min-height: auto;
+    aspect-ratio: 16 / 10;
+  }
+}

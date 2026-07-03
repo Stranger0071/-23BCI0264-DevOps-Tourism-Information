@@ -1,0 +1,2 @@
+E0703 22:54:34.858552   30888 portforward.go:502] "Unhandled Error" err="error copying from local connection to remote stream: writeto tcp6 [::1]:8088->[::1]:27177: read tcp6 [::1]:8088->[::1]:27177: wsarecv: An existing connection was forcibly closed by the remote host."
+E0703 22:54:34.859433   30888 portforward.go:502] "Unhandled Error" err="error copying from local connection to remote stream: writeto tcp6 [::1]:8088->[::1]:27176: read tcp6 [::1]:8088->[::1]:27176: wsarecv: An existing connection was forcibly closed by the remote host."

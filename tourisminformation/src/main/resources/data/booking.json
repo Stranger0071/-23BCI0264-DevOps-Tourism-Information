@@ -1,0 +1,70 @@
+{
+  "options": [
+    {
+      "id": "shikara",
+      "title": "Shikara Ride (Dal Lake)",
+      "provider": "Dal Lake Shikara Association",
+      "price": "₹500 – 1,500 / hour",
+      "duration": "1–3 hours recommended",
+      "description": "Sunrise rides include the floating vegetable market (before 8 AM). Book through your houseboat or at Dal Gate counter.",
+      "link": "https://booking.com",
+      "badge": "Popular"
+    },
+    {
+      "id": "gondola",
+      "title": "Gulmarg Gondola",
+      "provider": "J&K Cable Car Corporation",
+      "price": "₹740 – 1,200 (both phases)",
+      "duration": "Half day",
+      "description": "Phase 1: Gulmarg to Kongdoori. Phase 2: Kongdoori to Apharwat Peak. Tickets at counter — arrive before 10 AM in peak season.",
+      "link": "https://makemytrip.com",
+      "badge": "Seasonal"
+    },
+    {
+      "id": "trek",
+      "title": "Guided Trek (Thajiwas / Aru)",
+      "provider": "Registered Mountain Guides Association",
+      "price": "₹1,500 – 3,500 / day",
+      "duration": "Full day",
+      "description": "Includes guide fee only. Pony charges extra at Sonamarg. Verify guide ID card issued by Tourism Department.",
+      "link": "https://goibibo.com",
+      "badge": null
+    },
+    {
+      "id": "package",
+      "title": "Srinagar 3N/4D Package",
+      "provider": "J&K Tourism Approved Operators",
+      "price": "From ₹12,000 / person",
+      "duration": "4 days",
+      "description": "Typically covers houseboat, Gulmarg day trip, Mughal gardens, and airport transfer. Ask for operator registration number.",
+      "link": "https://makemytrip.com",
+      "badge": "Package"
+    },
+    {
+      "id": "rafting",
+      "title": "Lidder River Rafting",
+      "provider": "Pahalgam Adventure Sports Council",
+      "price": "₹800 – 1,800 / run",
+      "duration": "1–2 hours",
+      "description": "Seasonal — usually May to August when water levels permit. Grade II–III stretches near Pahalgam.",
+      "link": "https://booking.com",
+      "badge": "Seasonal"
+    },
+    {
+      "id": "houseboat",
+      "title": "Houseboat Stay",
+      "provider": "Houseboat Owners Association (HTC)",
+      "price": "₹3,500 – 8,000 / night",
+      "duration": "Overnight",
+      "description": "Category A/B/C houseboats on Dal and Nigeen lakes. Insist on HTC registration. Meals often included — confirm in advance.",
+      "link": "https://booking.com",
+      "badge": "Popular"
+    }
+  ],
+  "partners": [
+    { "name": "MakeMyTrip", "url": "https://makemytrip.com" },
+    { "name": "Goibibo", "url": "https://goibibo.com" },
+    { "name": "Booking.com", "url": "https://booking.com" },
+    { "name": "IRCTC", "url": "https://irctc.co.in" }
+  ]
+}

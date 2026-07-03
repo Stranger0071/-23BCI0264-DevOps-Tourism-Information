@@ -1,0 +1,57 @@
+{
+  "locations": [
+    {
+      "id": "srinagar",
+      "name": "Srinagar",
+      "type": "City Hub",
+      "description": "Capital city — airport, houseboats, Mughal gardens, old city markets.",
+      "lat": 34.0837,
+      "lng": 74.7973,
+      "zoom": 12
+    },
+    {
+      "id": "gulmarg-map",
+      "name": "Gulmarg",
+      "type": "Hill Station",
+      "description": "Ski resort and gondola — 50 km from Srinagar via Tangmarg.",
+      "lat": 34.0484,
+      "lng": 74.3805,
+      "zoom": 13
+    },
+    {
+      "id": "pahalgam-map",
+      "name": "Pahalgam",
+      "type": "Valley Town",
+      "description": "Lidder Valley base — 95 km south-east of Srinagar.",
+      "lat": 34.0161,
+      "lng": 75.315,
+      "zoom": 13
+    },
+    {
+      "id": "sonamarg-map",
+      "name": "Sonamarg",
+      "type": "Day Trip",
+      "description": "Thajiwas Glacier — 80 km north-east on Srinagar–Leh highway.",
+      "lat": 34.3032,
+      "lng": 75.292,
+      "zoom": 13
+    },
+    {
+      "id": "leh-route",
+      "name": "Srinagar–Leh Highway",
+      "type": "Scenic Route",
+      "description": "434 km high-altitude road via Kargil. Open roughly May–Oct. Permit check at Sonamarg.",
+      "lat": 34.5,
+      "lng": 76.0,
+      "zoom": 7
+    }
+  ],
+  "distances": [
+    { "from": "Srinagar Airport", "to": "Dal Lake (Boulevard)", "distance": "12 km", "time": "25–35 min" },
+    { "from": "Srinagar", "to": "Gulmarg", "distance": "50 km", "time": "1.5–2 hrs" },
+    { "from": "Srinagar", "to": "Pahalgam", "distance": "95 km", "time": "2.5–3 hrs" },
+    { "from": "Srinagar", "to": "Sonamarg", "distance": "80 km", "time": "2–2.5 hrs" },
+    { "from": "Srinagar", "to": "Jammu", "distance": "270 km", "time": "8–10 hrs" },
+    { "from": "Gulmarg", "to": "Pahalgam", "distance": "140 km", "time": "4+ hrs (via Srinagar)" }
+  ]
+}

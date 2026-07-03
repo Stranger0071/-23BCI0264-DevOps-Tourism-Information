@@ -1,0 +1,126 @@
+[
+  {
+    "id": "permits",
+    "title": "Permits & Registration",
+    "icon": "📋",
+    "summary": "What you need before travelling to Kashmir.",
+    "sections": [
+      {
+        "heading": "For Indian nationals",
+        "content": "No special permit is required for Srinagar, Gulmarg, Pahalgam, Sonamarg, or other standard tourist circuits. Carry a valid government photo ID (Aadhaar, passport, or driving licence)."
+      },
+      {
+        "heading": "For foreign nationals",
+        "content": "Register at the FRRO (Foreigners Registration Office) in Srinagar within 24 hours of arrival if staying more than 14 days. Some restricted areas near the LoC require separate permits — check with the DC office before planning offbeat routes."
+      },
+      {
+        "heading": "Amarnath Yatra",
+        "content": "Separate registration mandatory via the SASB portal. Medical certificate required. Yatra typically runs July–August."
+      }
+    ]
+  },
+  {
+    "id": "getting-there",
+    "title": "Getting There",
+    "icon": "✈️",
+    "summary": "Air, road, and rail connections to the valley.",
+    "sections": [
+      {
+        "heading": "By air",
+        "content": "Sheikh ul-Alam International Airport (SXR) in Srinagar connects to Delhi, Mumbai, Bangalore, and other major cities. Pre-paid taxi counters are outside arrivals — fixed rates to city centre (~₹800–1200)."
+      },
+      {
+        "heading": "By road",
+        "content": "NH-44 from Jammu to Srinagar (approx. 270 km, 8–10 hrs depending on traffic and weather). Jawahar Tunnel and Banihal pass can see delays in winter. Shared sumos run from Jammu bus stand."
+      },
+      {
+        "heading": "By train",
+        "content": "Nearest major railhead: Jammu Tawi (JAT). From Jammu, take road transport to Srinagar. Udhampur–Baramulla rail link is partially operational — check IRCTC for current status."
+      }
+    ]
+  },
+  {
+    "id": "best-seasons",
+    "title": "When to Visit",
+    "icon": "🗓️",
+    "summary": "Season-by-season breakdown for planning.",
+    "sections": [
+      {
+        "heading": "Spring (Mar – May)",
+        "content": "Tulip Garden in full bloom (usually April). Mild weather, fewer crowds than summer. Some higher routes still snow-bound."
+      },
+      {
+        "heading": "Summer (Jun – Aug)",
+        "content": "Peak season. Book hotels 3–4 weeks ahead. Amarnath Yatra traffic affects Pahalgam. Day temperatures 20–30°C; carry a light jacket for evenings."
+      },
+      {
+        "heading": "Autumn (Sep – Nov)",
+        "content": "Chinar leaves turn gold — photographers' favourite. Harvest season in orchards. Gulmarg gondola usually still running."
+      },
+      {
+        "heading": "Winter (Dec – Feb)",
+        "content": "Gulmarg ski season. Srinagar sees occasional snowfall; houseboats have bukhari heating. Check flight cancellations during heavy snow."
+      }
+    ]
+  },
+  {
+    "id": "local-customs",
+    "title": "Local Etiquette",
+    "icon": "🤝",
+    "summary": "Respectful travel in a culturally rich region.",
+    "sections": [
+      {
+        "heading": "Dress & behaviour",
+        "content": "Modest dress appreciated, especially near religious sites. Ask before photographing people — many are happy to oblige but it's courtesy to check."
+      },
+      {
+        "heading": "Bargaining",
+        "content": "Expected at handicraft shops and shikara rates. Fixed prices at government emporiums (J&K Govt Arts Emporium on Residency Road is reliable for papier-mâché and shawls)."
+      },
+      {
+        "heading": "Food notes",
+        "content": "Wazwan is the traditional feast — usually needs advance order for groups. Local kahwa (saffron tea) is offered everywhere; accepting a cup is a nice gesture. Pure veg options exist but are limited outside Srinagar."
+      }
+    ]
+  },
+  {
+    "id": "safety",
+    "title": "Safety & Emergencies",
+    "icon": "🆘",
+    "summary": "Practical numbers and advice.",
+    "sections": [
+      {
+        "heading": "Helplines",
+        "content": "J&K Tourism Helpline: 1800-180-7777 (toll-free). Tourist Police Srinagar: 0194-245-2000. Emergency: 112 (single emergency number)."
+      },
+      {
+        "heading": "Health",
+        "content": "SKIMS (Soura) and SMHS Hospital handle emergencies in Srinagar. Altitude sickness possible above 3,000 m — acclimatise in Gulmarg before long treks. Pharmacies common in Srinagar; carry basic meds if heading remote."
+      },
+      {
+        "heading": "Connectivity",
+        "content": "4G available in Srinagar and major towns. Spotty coverage in Sonamarg upper reaches and some Pahalgam trails. Download offline maps before leaving city limits."
+      }
+    ]
+  },
+  {
+    "id": "packing",
+    "title": "What to Pack",
+    "icon": "🎒",
+    "summary": "Essentials by season.",
+    "sections": [
+      {
+        "heading": "Year-round",
+        "content": "Photo ID, sunscreen (high altitude), reusable water bottle, cash (ATMs in towns but not everywhere), power bank."
+      },
+      {
+        "heading": "Summer add-ons",
+        "content": "Light rain jacket, comfortable walking shoes, hat. Umbrella useful for sudden showers."
+      },
+      {
+        "heading": "Winter add-ons",
+        "content": "Thermal layers, waterproof boots, lip balm, gloves. Gulmarg needs proper winter gear if skiing — rentals available but sizes limited during peak."
+      }
+    ]
+  }
+]

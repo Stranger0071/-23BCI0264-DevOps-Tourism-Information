@@ -1,0 +1,374 @@
+.hero {
+  position: relative;
+  min-height: 520px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 40%;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(30, 51, 41, 0.88) 0%,
+    rgba(30, 51, 41, 0.55) 50%,
+    rgba(28, 26, 23, 0.4) 100%
+  );
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.hero-content {
+  position: relative;
+  padding: 4rem 1.25rem 3rem;
+  max-width: 680px;
+  color: var(--white);
+}
+
+.hero-kashmiri {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--saffron-light);
+  margin-bottom: 0.75rem;
+}
+
+.hero h1 {
+  font-size: clamp(2.25rem, 5vw, 3.25rem);
+  margin-bottom: 1.25rem;
+  line-height: 1.15;
+}
+
+.hero h1 em {
+  font-style: italic;
+  color: var(--cream);
+  font-weight: 400;
+}
+
+.hero-sub {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  opacity: 0.9;
+  margin-bottom: 1.75rem;
+  max-width: 520px;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.hero-outline {
+  border-color: var(--white) !important;
+  color: var(--white) !important;
+}
+
+.hero-outline:hover {
+  background: var(--white) !important;
+  color: var(--pine) !important;
+}
+
+.hero-stats {
+  position: relative;
+  background: var(--white);
+  border-top: 3px solid var(--saffron);
+  box-shadow: 0 -12px 36px rgba(28, 26, 23, 0.12);
+}
+
+.stats-inner {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1.25rem 1.25rem;
+  gap: 1.5rem 2.5rem;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-num {
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  color: var(--pine);
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  margin-top: 0.2rem;
+}
+
+.stat-helpline a {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--saffron);
+  text-decoration: none;
+}
+
+.stat-helpline a:hover {
+  text-decoration: underline;
+}
+
+.home-section {
+  padding: 3.5rem 0;
+}
+
+.section-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 2rem;
+  gap: 1rem;
+}
+
+.section-header-row h2 {
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+}
+
+.view-all-link {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--lake);
+  white-space: nowrap;
+}
+
+.home-attractions-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.75rem;
+}
+
+.home-quick-links {
+  background: var(--cream);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.home-quick-links h2 {
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  margin-bottom: 2rem;
+}
+
+.quick-links-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+
+.quick-link-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.5rem 1.25rem;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 1px 0 rgba(28, 26, 23, 0.03);
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+
+.quick-link-card:hover {
+  border-color: var(--pine);
+  box-shadow: 0 12px 28px rgba(45, 74, 62, 0.1);
+  transform: translateY(-2px);
+}
+
+.ql-highlight {
+  border-color: var(--saffron);
+  background: linear-gradient(to bottom, #fff9f5, var(--white));
+}
+
+.ql-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.35rem;
+  height: 2.35rem;
+  border-radius: 8px;
+  background: var(--cream);
+  color: var(--pine);
+  border: 1px solid var(--border);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.75rem;
+}
+
+.ql-highlight .ql-icon {
+  background: var(--pine);
+  border-color: var(--pine);
+  color: var(--white);
+}
+
+.quick-link-card h3 {
+  font-size: 1.05rem;
+  margin-bottom: 0.5rem;
+  color: var(--pine);
+}
+
+.quick-link-card p {
+  font-size: 0.85rem;
+  color: var(--ink-muted);
+  line-height: 1.5;
+}
+
+.editorial-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.editorial-image {
+  position: relative;
+}
+
+.editorial-image img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  box-shadow: 0 12px 30px rgba(28, 26, 23, 0.12);
+}
+
+.editorial-caption {
+  display: block;
+  font-size: 0.72rem;
+  color: var(--ink-muted);
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
+.editorial-text h2 {
+  font-size: 2rem;
+  margin-bottom: 1.25rem;
+}
+
+.editorial-text p {
+  color: var(--ink-muted);
+  margin-bottom: 1rem;
+  line-height: 1.65;
+}
+
+.editorial-text .btn {
+  margin-top: 0.5rem;
+}
+
+.home-seasons h2 {
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  margin-bottom: 1.75rem;
+}
+
+.seasons-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  border: 1px solid var(--border);
+}
+
+.season-card {
+  padding: 1.5rem 1.25rem;
+  background: var(--white);
+  border-right: 1px solid var(--border);
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.season-card:hover {
+  transform: translateY(-1px);
+}
+
+.season-card:last-child {
+  border-right: none;
+}
+
+.season-card h3 {
+  font-size: 1.15rem;
+  margin-bottom: 0.25rem;
+}
+
+.season-months {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--saffron);
+  letter-spacing: 0.04em;
+  margin-bottom: 0.65rem;
+}
+
+.season-card p {
+  font-size: 0.85rem;
+  color: var(--ink-muted);
+  line-height: 1.5;
+}
+
+.season-active {
+  background: var(--pine);
+  color: var(--white);
+}
+
+.season-active h3 {
+  color: var(--white);
+}
+
+.season-active .season-months {
+  color: var(--saffron-light);
+}
+
+.season-active p {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+@media (max-width: 900px) {
+  .quick-links-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .editorial-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .seasons-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .season-card {
+    border-bottom: 1px solid var(--border);
+  }
+}
+
+@media (max-width: 640px) {
+  .home-attractions-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .quick-links-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .seasons-row {
+    grid-template-columns: 1fr;
+  }
+
+  .season-card {
+    border-right: none;
+  }
+}
