@@ -1,4 +1,4 @@
-const API_BASE = import.meta.env.VITE_API_URL || '/api';
+const API_BASE = (import.meta.env.VITE_API_URL || '/api').replace(/\/+$/, '');
 
 function decodeMojibake(value) {
   if (typeof value !== 'string' || !/[\u00c2\u00c3\u00e2\u00f0]/.test(value)) {

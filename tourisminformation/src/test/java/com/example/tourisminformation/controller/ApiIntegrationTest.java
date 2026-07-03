@@ -18,6 +18,18 @@ class ApiIntegrationTest {
 	private MockMvc mockMvc;
 
 	@Test
+	void apiRootReturnsServiceMetadata() throws Exception {
+		mockMvc.perform(get("/api"))
+				.andExpect(status().isOk())
+				.andExpect(jsonPath("$.service").value("tourisminformation"))
+				.andExpect(jsonPath("$.endpoints.health").value("/api/health"));
+
+		mockMvc.perform(get("/api/"))
+				.andExpect(status().isOk())
+				.andExpect(jsonPath("$.service").value("tourisminformation"));
+	}
+
+	@Test
 	void healthEndpointReturnsUp() throws Exception {
 		mockMvc.perform(get("/api/health"))
 				.andExpect(status().isOk())
