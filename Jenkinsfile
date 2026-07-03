@@ -27,20 +27,6 @@ pipeline {
             }
         }
 
-        stage('Frontend — Install & Build') {
-            steps {
-                dir('frontend') {
-                    sh 'npm ci'
-                    sh 'npm run build'
-                }
-            }
-            post {
-                success {
-                    archiveArtifacts artifacts: 'frontend/dist/**/*', fingerprint: true
-                }
-            }
-        }
-
         stage('Docker — Build Images') {
             parallel {
                 stage('Backend Image') {
@@ -66,9 +52,8 @@ pipeline {
                     docker compose down --remove-orphans 2>/dev/null || true
                     docker compose up -d --build
                     sleep 15
-                    curl -sf http://localhost:8080/api/health
-                    curl -sf http://localhost/api/health
-                    curl -sf http://localhost/ | head -c 200
+                    curl -sf http://localhost:8081/api/health
+                    curl -sf http://localhost:80/ | head -c 200
                 '''
             }
             post {
